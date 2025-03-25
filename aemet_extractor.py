@@ -4,6 +4,10 @@ import re
 import os
 from urllib.parse import urljoin
 
+output_dir = "/var/www/html/"
+
+os.makedirs(output_dir, exist_ok=True)
+
 def extraer_contenido_aemet():
     """
     Extract content from the 'contenedor_central_izq' div of the AEMET page for Mérida
@@ -154,7 +158,6 @@ def main():
     html_content = extraer_contenido_aemet()
     
     if html_content:
-        output_dir = os.path.dirname(os.path.abspath(__file__))
         output_file = os.path.join(output_dir, "aemet.html")
         
         if guardar_html(html_content, output_file):
