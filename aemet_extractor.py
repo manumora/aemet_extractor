@@ -112,6 +112,25 @@ def extraer_contenido_aemet():
     <title>Predicción meteorológica para Mérida - AEMET</title>
     <style>
 {estilos}
+
+/* Estilos para aplicar zoom al 150% */
+body {{
+    transform: scale(1.15);
+    transform-origin: top left;
+    width: 86.95%; /* 100/1.5 = 66.67% para compensar el zoom */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}}
+
+/* Ajustes adicionales para mejorar la visualización con el zoom */
+html {{
+    overflow-x: hidden;
+}}
+
+table, img {{
+    max-width: 100%;
+}}
     </style>
     
     {' '.join([f'<link rel="stylesheet" href="{css}">' for css in css_links])}
