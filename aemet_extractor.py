@@ -5,6 +5,7 @@ import os
 from urllib.parse import urljoin
 
 output_dir = "/var/www/html/"
+output_dir = "./"
 
 os.makedirs(output_dir, exist_ok=True)
 
@@ -37,12 +38,17 @@ def extraer_contenido_aemet():
             contenedor.find('div', class_='notas_tabla'),
             contenedor.find('div', class_='alinear_texto_dcha'),
             contenedor.find('div', class_='enlace_mas_detalle margintop5px_important'),
-            contenedor.find('div', class_='paddingbot40')            
+            contenedor.find('div', class_='paddingbot40')
         ]
         
         for elemento in elementos_a_eliminar:
             if elemento:
                 elemento.decompose()
+        
+        # Eliminar filas con clase ocultar_filas_tabla
+        filas_ocultas = contenedor.find_all('tr', class_='ocultar_filas_tabla')
+        for fila in filas_ocultas:
+            fila.decompose()
         
         # Add title above the table
         titulo = soup.new_tag('h1')
