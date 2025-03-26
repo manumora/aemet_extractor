@@ -115,9 +115,9 @@ def extraer_contenido_aemet():
 
 /* Estilos para aplicar zoom al 150% */
 body {{
-    transform: scale(1.15);
+    transform: scale(1.7);
     transform-origin: top left;
-    width: 86.95%; /* 100/1.5 = 66.67% para compensar el zoom */
+    width: 58.82%; /* 100/1.7 = 58.82% para compensar el zoom */
     margin: 0;
     padding: 0;
     overflow-x: hidden;
