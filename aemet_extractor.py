@@ -121,7 +121,7 @@ body {{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-image: url('background.png');
+    background-image: url('https://raw.githubusercontent.com/manumora/aemet_extractor/refs/heads/master/background.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
