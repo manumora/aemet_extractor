@@ -5,7 +5,7 @@ import os
 from urllib.parse import urljoin
 
 output_dir = "/var/www/html/"
-output_dir = "./"
+#output_dir = "./"
 
 os.makedirs(output_dir, exist_ok=True)
 
