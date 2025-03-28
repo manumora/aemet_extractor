@@ -10,12 +10,16 @@
 
 /* Estilos para aplicar zoom al 150% */
 body {
-    transform: scale(1.15);
+    transform: scale(1.7);
     transform-origin: top left;
-    width: 86.95%; /* 100/1.5 = 66.67% para compensar el zoom */
+    width: 58.82%; /* 100/1.7 = 58.82% para compensar el zoom */
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 /* Ajustes adicionales para mejorar la visualización con el zoom */
@@ -25,6 +29,11 @@ html {
 
 table, img {
     max-width: 100%;
+}
+
+/* Estilo para aplicar fondo blanco a las celdas de la tabla */
+td {
+    background-color: white !important;
 }
     </style>
     
@@ -55,13 +64,13 @@ table, img {
 			}
 						
 			
-			#tabla_prediccion td.comunes:nth-of-type(1):before { content: 'martes 25'; }
-			#tabla_prediccion td.comunes:nth-of-type(2):before { content: 'miércoles 26'; }
-			#tabla_prediccion td.comunes:nth-of-type(3):before { content: 'jueves 27'; }
-			#tabla_prediccion td.comunes:nth-of-type(4):before { content: 'viernes 28'; }
-			#tabla_prediccion td.comunes:nth-of-type(5):before { content: 'sábado 29'; }
-			#tabla_prediccion td.comunes:nth-of-type(6):before { content: 'domingo 30'; }
-			#tabla_prediccion td.comunes:nth-of-type(7):before { content: 'lunes 31'; }
+			#tabla_prediccion td.comunes:nth-of-type(1):before { content: 'viernes 28'; }
+			#tabla_prediccion td.comunes:nth-of-type(2):before { content: 'sábado 29'; }
+			#tabla_prediccion td.comunes:nth-of-type(3):before { content: 'domingo 30'; }
+			#tabla_prediccion td.comunes:nth-of-type(4):before { content: 'lunes 31'; }
+			#tabla_prediccion td.comunes:nth-of-type(5):before { content: 'martes 01'; }
+			#tabla_prediccion td.comunes:nth-of-type(6):before { content: 'miércoles 02'; }
+			#tabla_prediccion td.comunes:nth-of-type(7):before { content: 'jueves 03'; }
 			
 			
 		}
@@ -69,77 +78,83 @@ table, img {
 	
 	<style>
 				@media (max-width: 760px) {
-				#tabla_prediccion td.nocomunes:nth-of-type(1):before { content: 'martes 25: 12-18 h'; }
+				#tabla_prediccion td.nocomunes:nth-of-type(1):before { content: 'viernes 28: 6-12 h'; }
 				
 				}
 			</style>
  				<style>
 				@media (max-width: 760px) {
-				#tabla_prediccion td.nocomunes:nth-of-type(2):before { content: 'martes 25: 18-24 h'; }
+				#tabla_prediccion td.nocomunes:nth-of-type(2):before { content: 'viernes 28: 12-18 h'; }
 				
 				}
 			</style>
  				<style>
 				@media (max-width: 760px) {
-				#tabla_prediccion td.nocomunes:nth-of-type(3):before { content: 'miércoles 26: 0-6 h'; }
+				#tabla_prediccion td.nocomunes:nth-of-type(3):before { content: 'viernes 28: 18-24 h'; }
 				
 				}
 			</style>
  				<style>
 				@media (max-width: 760px) {
-				#tabla_prediccion td.nocomunes:nth-of-type(4):before { content: 'miércoles 26: 6-12 h'; }
+				#tabla_prediccion td.nocomunes:nth-of-type(4):before { content: 'sábado 29: 0-6 h'; }
 				
 				}
 			</style>
  				<style>
 				@media (max-width: 760px) {
-				#tabla_prediccion td.nocomunes:nth-of-type(5):before { content: 'miércoles 26: 12-18 h'; }
+				#tabla_prediccion td.nocomunes:nth-of-type(5):before { content: 'sábado 29: 6-12 h'; }
 				
 				}
 			</style>
  				<style>
 				@media (max-width: 760px) {
-				#tabla_prediccion td.nocomunes:nth-of-type(6):before { content: 'miércoles 26: 18-24 h'; }
+				#tabla_prediccion td.nocomunes:nth-of-type(6):before { content: 'sábado 29: 12-18 h'; }
 				
 				}
 			</style>
  				<style>
 				@media (max-width: 760px) {
-				#tabla_prediccion td.nocomunes:nth-of-type(7):before { content: 'jueves 27: 0-12 h'; }
+				#tabla_prediccion td.nocomunes:nth-of-type(7):before { content: 'sábado 29: 18-24 h'; }
 				
 				}
 			</style>
  				<style>
 				@media (max-width: 760px) {
-				#tabla_prediccion td.nocomunes:nth-of-type(8):before { content: 'jueves 27: 12-24 h'; }
+				#tabla_prediccion td.nocomunes:nth-of-type(8):before { content: 'domingo 30: 0-12 h'; }
 				
 				}
 			</style>
  				<style>
 				@media (max-width: 760px) {
-				#tabla_prediccion td.nocomunes:nth-of-type(9):before { content: 'viernes 28: 0-12 h'; }
+				#tabla_prediccion td.nocomunes:nth-of-type(9):before { content: 'domingo 30: 12-24 h'; }
 				
 				}
 			</style>
  				<style>
 				@media (max-width: 760px) {
-				#tabla_prediccion td.nocomunes:nth-of-type(10):before { content: 'viernes 28: 12-24 h'; }
+				#tabla_prediccion td.nocomunes:nth-of-type(10):before { content: 'lunes 31: 0-12 h'; }
+				
+				}
+			</style>
+ 				<style>
+				@media (max-width: 760px) {
+				#tabla_prediccion td.nocomunes:nth-of-type(11):before { content: 'lunes 31: 12-24 h'; }
 				
 				}
 			</style>
  				<style>
 					@media (max-width: 760px) {
-						#tabla_prediccion td.nocomunes:nth-of-type(11):before { content: 'sáb. 29'; }	
+						#tabla_prediccion td.nocomunes:nth-of-type(12):before { content: 'mar. 01'; }	
 					}
 				</style>
  				<style>
 					@media (max-width: 760px) {
-						#tabla_prediccion td.nocomunes:nth-of-type(12):before { content: 'dom. 30'; }	
+						#tabla_prediccion td.nocomunes:nth-of-type(13):before { content: 'mié. 02'; }	
 					}
 				</style>
  				<style>
 					@media (max-width: 760px) {
-						#tabla_prediccion td.nocomunes:nth-of-type(13):before { content: 'lun. 31'; }	
+						#tabla_prediccion td.nocomunes:nth-of-type(14):before { content: 'jue. 03'; }	
 					}
 				</style>
  				 -->
@@ -150,54 +165,51 @@ table, img {
 <table cellspacing="0" class="tabla_localidades tabla_fila_fija_scroll marginbottom10px" id="tabla_prediccion" summary="Esta tabla muestra la predición para el municipio de Mérida, los datos se muestran detallados para hoy en 6 días.">
 <thead>
 <tr class="cabecera_loc_niv1">
-<th abbr="mar." class="borde_izq_dcha_fecha" colspan="2" title="martes 25">mar. 25</th>
-<th abbr="mié." class="borde_izq_dcha_fecha" colspan="4" title="miércoles 26">mié. 26</th>
-<th abbr="jue." class="borde_izq_dcha_fecha" colspan="2" title="jueves 27">jue. 27</th>
-<th abbr="vie." class="borde_izq_dcha_fecha" colspan="2" title="viernes 28">vie. 28</th>
-<th abbr="sáb." class="borde_izq_dcha_fecha" colspan="1" title="sábado 29">sáb. 29</th>
-<th abbr="dom." class="borde_izq_dcha_fecha" colspan="1" title="domingo 30">dom. 30</th>
-<th abbr="lun." class="borde_izq_dcha_fecha" colspan="1" title="lunes 31">lun. 31</th>
+<th abbr="vie." class="borde_izq_dcha_fecha" colspan="3" title="viernes 28">vie. 28</th>
+<th abbr="sáb." class="borde_izq_dcha_fecha" colspan="4" title="sábado 29">sáb. 29</th>
+<th abbr="dom." class="borde_izq_dcha_fecha" colspan="2" title="domingo 30">dom. 30</th>
+<th abbr="lun." class="borde_izq_dcha_fecha" colspan="2" title="lunes 31">lun. 31</th>
+<th abbr="mar." class="borde_izq_dcha_fecha" colspan="1" title="martes 01">mar. 01</th>
+<th abbr="mié." class="borde_izq_dcha_fecha" colspan="1" title="miércoles 02">mié. 02</th>
+<th abbr="jue." class="borde_izq_dcha_fecha" colspan="1" title="jueves 03">jue. 03</th>
 </tr>
 </thead>
 <tbody>
 <tr class="cabecera_loc_niv2">
 <th class="borde_izq_dcha_estado_cielo no_wrap">
+<div class="fuente09em">06–12 h</div>
+<div class="width47px margen_auto_horizontal"><img alt="Poco nuboso" src="https://www.aemet.es/imagenes/png/estado_cielo/12_g.png" title="Poco nuboso"/></div>
+<div class="no_wrap" title="Temperatura a las  12 h:  19°C">19°C</div>
+</th>
+<th class="borde_izq_dcha_estado_cielo no_wrap">
 <div class="fuente09em">12–18 h</div>
-<div class="width47px margen_auto_horizontal"><img alt="Intervalos nubosos" src="https://www.aemet.es/imagenes/png/estado_cielo/13_g.png" title="Intervalos nubosos"/></div>
-<div class="no_wrap" title="Temperatura a las  18 h:  17°C">17°C</div>
+<div class="width47px margen_auto_horizontal"><img alt="Cielo despejado" src="https://www.aemet.es/imagenes/png/estado_cielo/11_g.png" title="Cielo despejado"/></div>
+<div class="no_wrap" title="Temperatura a las  18 h:  19°C">19°C</div>
 </th>
 <th class="borde_izq_dcha_estado_cielo no_wrap">
 <div class="fuente09em">18–24 h</div>
 <div class="width47px margen_auto_horizontal"><img alt="Cielo despejado" src="https://www.aemet.es/imagenes/png/estado_cielo/11n_g.png" title="Cielo despejado"/></div>
-<div class="no_wrap" title="Temperatura a las  24 h:  9°C">9°C</div>
+<div class="no_wrap" title="Temperatura a las  24 h:  10°C">10°C</div>
 </th>
 <th class="borde_izq_dcha_estado_cielo no_wrap">
 <div class="fuente09em">00–06 h</div>
 <div class="width47px margen_auto_horizontal"><img alt="Cielo despejado" src="https://www.aemet.es/imagenes/png/estado_cielo/11n_g.png" title="Cielo despejado"/></div>
-<div class="no_wrap" title="Temperatura a las  06 h:  6°C">6°C</div>
+<div class="no_wrap" title="Temperatura a las  06 h:  7°C">7°C</div>
 </th>
 <th class="borde_izq_dcha_estado_cielo no_wrap">
 <div class="fuente09em">06–12 h</div>
 <div class="width47px margen_auto_horizontal"><img alt="Cielo despejado" src="https://www.aemet.es/imagenes/png/estado_cielo/11_g.png" title="Cielo despejado"/></div>
-<div class="no_wrap" title="Temperatura a las  12 h:  18°C">18°C</div>
+<div class="no_wrap" title="Temperatura a las  12 h:  19°C">19°C</div>
 </th>
 <th class="borde_izq_dcha_estado_cielo no_wrap">
 <div class="fuente09em">12–18 h</div>
-<div class="width47px margen_auto_horizontal"><img alt="Poco nuboso" src="https://www.aemet.es/imagenes/png/estado_cielo/12_g.png" title="Poco nuboso"/></div>
-<div class="no_wrap" title="Temperatura a las  18 h:  17°C">17°C</div>
+<div class="width47px margen_auto_horizontal"><img alt="Cielo despejado" src="https://www.aemet.es/imagenes/png/estado_cielo/11_g.png" title="Cielo despejado"/></div>
+<div class="no_wrap" title="Temperatura a las  18 h:  19°C">19°C</div>
 </th>
 <th class="borde_izq_dcha_estado_cielo no_wrap">
 <div class="fuente09em">18–24 h</div>
-<div class="width47px margen_auto_horizontal"><img alt="Poco nuboso" src="https://www.aemet.es/imagenes/png/estado_cielo/12n_g.png" title="Poco nuboso"/></div>
-<div class="no_wrap" title="Temperatura a las  24 h:  10°C">10°C</div>
-</th>
-<th class="borde_izq_dcha_estado_cielo no_wrap">
-<div class="fuente09em">00–12 h</div>
-<div class="width47px margen_auto_horizontal"><img alt="Poco nuboso" src="https://www.aemet.es/imagenes/png/estado_cielo/12_g.png" title="Poco nuboso"/></div>
-</th>
-<th class="borde_izq_dcha_estado_cielo no_wrap">
-<div class="fuente09em">12–24 h</div>
-<div class="width47px margen_auto_horizontal"><img alt="Poco nuboso" src="https://www.aemet.es/imagenes/png/estado_cielo/12_g.png" title="Poco nuboso"/></div>
+<div class="width47px margen_auto_horizontal"><img alt="Cielo despejado" src="https://www.aemet.es/imagenes/png/estado_cielo/11n_g.png" title="Cielo despejado"/></div>
+<div class="no_wrap" title="Temperatura a las  24 h:  12°C">12°C</div>
 </th>
 <th class="borde_izq_dcha_estado_cielo no_wrap">
 <div class="fuente09em">00–12 h</div>
@@ -208,23 +220,30 @@ table, img {
 <div class="width47px margen_auto_horizontal"><img alt="Cielo despejado" src="https://www.aemet.es/imagenes/png/estado_cielo/11_g.png" title="Cielo despejado"/></div>
 </th>
 <th class="borde_izq_dcha_estado_cielo no_wrap">
-<div class="ocultar_resp"> </div>
+<div class="fuente09em">00–12 h</div>
 <div class="width47px margen_auto_horizontal"><img alt="Cielo despejado" src="https://www.aemet.es/imagenes/png/estado_cielo/11_g.png" title="Cielo despejado"/></div>
 </th>
 <th class="borde_izq_dcha_estado_cielo no_wrap">
-<div class="ocultar_resp"> </div>
-<div class="width47px margen_auto_horizontal"><img alt="Cielo despejado" src="https://www.aemet.es/imagenes/png/estado_cielo/11_g.png" title="Cielo despejado"/></div>
-</th>
-<th class="borde_izq_dcha_estado_cielo no_wrap">
-<div class="ocultar_resp"> </div>
+<div class="fuente09em">12–24 h</div>
 <div class="width47px margen_auto_horizontal"><img alt="Poco nuboso" src="https://www.aemet.es/imagenes/png/estado_cielo/12_g.png" title="Poco nuboso"/></div>
 </th>
+<th class="borde_izq_dcha_estado_cielo no_wrap">
+<div class="ocultar_resp"> </div>
+<div class="width47px margen_auto_horizontal"><img alt="Nuboso" src="https://www.aemet.es/imagenes/png/estado_cielo/14_g.png" title="Nuboso"/></div>
+</th>
+<th class="borde_izq_dcha_estado_cielo no_wrap">
+<div class="ocultar_resp"> </div>
+<div class="width47px margen_auto_horizontal"><img alt="Intervalos nubosos con lluvia escasa" src="https://www.aemet.es/imagenes/png/estado_cielo/43_g.png" title="Intervalos nubosos con lluvia escasa"/></div>
+</th>
+<th class="borde_izq_dcha_estado_cielo no_wrap">
+<div class="ocultar_resp"> </div>
+<div class="width47px margen_auto_horizontal"><img alt="Intervalos nubosos" src="https://www.aemet.es/imagenes/png/estado_cielo/13_g.png" title="Intervalos nubosos"/></div>
+</th>
 </tr>
 <tr class="fila_par">
-<th abbr="Pro." colspan="13" title="Probabilidad de precipitación"><b class="cabecera_tabla_localidades">Probabilidad de precipitación</b></th>
+<th abbr="Pro." colspan="14" title="Probabilidad de precipitación"><b class="cabecera_tabla_localidades">Probabilidad de precipitación</b></th>
 </tr>
 <tr>
-<td class="nocomunes">20% </td>
 <td class="nocomunes">0% </td>
 <td class="nocomunes">0% </td>
 <td class="nocomunes">0% </td>
@@ -236,12 +255,15 @@ table, img {
 <td class="nocomunes">0% </td>
 <td class="nocomunes">0% </td>
 <td class="nocomunes">0% </td>
-<td class="nocomunes">0% </td>
+<td class="nocomunes">45% </td>
+<td class="nocomunes">70% </td>
+<td class="nocomunes">45% </td>
 </tr>
 <tr class="fila_par">
-<th abbr="Cot." colspan="13" title="Cota de nieve a nivel de provincia (m)"><b class="cabecera_tabla_localidades">Cota de nieve a nivel de provincia (m)</b></th>
+<th abbr="Cot." colspan="14" title="Cota de nieve a nivel de provincia (m)"><b class="cabecera_tabla_localidades">Cota de nieve a nivel de provincia (m)</b></th>
 </tr>
 <tr>
+<td class="nocomunes"> </td>
 <td class="nocomunes"> </td>
 <td class="nocomunes"> </td>
 <td class="nocomunes"> </td>
@@ -257,25 +279,34 @@ table, img {
 <td class="nocomunes"> </td>
 </tr>
 <tr class="fila_par">
-<th abbr="Max/Min." colspan="13" title="Temperatura mínima y máxima (°C)"><b class="cabecera_tabla_localidades">Temperatura mínima y máxima (°C)</b></th>
+<th abbr="Max/Min." colspan="14" title="Temperatura mínima y máxima (°C)"><b class="cabecera_tabla_localidades">Temperatura mínima y máxima (°C)</b></th>
 </tr>
 <tr>
-<td class="alinear_texto_centro no_wrap comunes" colspan="2"><span class="texto_azul">5</span> / <span class="texto_rojo">18 </span></td>
-<td class="alinear_texto_centro no_wrap comunes" colspan="4"><span class="texto_azul">6</span> / <span class="texto_rojo">20 </span></td>
-<td class="alinear_texto_centro no_wrap comunes" colspan="2"><span class="texto_azul">6</span> / <span class="texto_rojo">20 </span></td>
-<td class="alinear_texto_centro no_wrap comunes" colspan="2"><span class="texto_azul">7</span> / <span class="texto_rojo">22 </span></td>
-<td class="alinear_texto_centro no_wrap comunes"><span class="texto_azul">7</span> / <span class="texto_rojo">23 </span></td>
+<td class="alinear_texto_centro no_wrap comunes" colspan="3"><span class="texto_azul">5</span> / <span class="texto_rojo">22 </span></td>
+<td class="alinear_texto_centro no_wrap comunes" colspan="4"><span class="texto_azul">6</span> / <span class="texto_rojo">23 </span></td>
+<td class="alinear_texto_centro no_wrap comunes" colspan="2"><span class="texto_azul">7</span> / <span class="texto_rojo">21 </span></td>
+<td class="alinear_texto_centro no_wrap comunes" colspan="2"><span class="texto_azul">7</span> / <span class="texto_rojo">25 </span></td>
+<td class="alinear_texto_centro no_wrap comunes"><span class="texto_azul">8</span> / <span class="texto_rojo">22 </span></td>
 <td class="alinear_texto_centro no_wrap comunes"><span class="texto_azul">9</span> / <span class="texto_rojo">24 </span></td>
-<td class="alinear_texto_centro no_wrap comunes"><span class="texto_azul">10</span> / <span class="texto_rojo">24 </span></td>
+<td class="alinear_texto_centro no_wrap comunes"><span class="texto_azul">9</span> / <span class="texto_rojo">25 </span></td>
 </tr>
 
 
 
 
 <tr class="fila_par">
-<th abbr="Vie." colspan="13" title="Dirección y velocidad del viento"><b class="cabecera_tabla_localidades">Dirección y velocidad del viento (km/h)</b></th>
+<th abbr="Vie." colspan="14" title="Dirección y velocidad del viento"><b class="cabecera_tabla_localidades">Dirección y velocidad del viento (km/h)</b></th>
 </tr>
 <tr>
+<td class="alinear_texto_centro nocomunes">
+<div class="icono_viento" title="Del noroeste (NO)">
+<div class="texto_viento">NO</div>
+<div class="imagen_viento">
+<div class="imagen_direccion_viento imagen_NO"></div>
+<div class="texto_km_viento"><div>10</div></div>
+</div>
+</div>
+</td>
 <td class="alinear_texto_centro nocomunes">
 <div class="icono_viento" title="Del noroeste (NO)">
 <div class="texto_viento">NO</div>
@@ -290,6 +321,15 @@ table, img {
 <div class="texto_viento">O</div>
 <div class="imagen_viento">
 <div class="imagen_direccion_viento imagen_O"></div>
+<div class="texto_km_viento"><div>10</div></div>
+</div>
+</div>
+</td>
+<td class="alinear_texto_centro nocomunes">
+<div class="icono_viento" title="Del sudeste (SE)">
+<div class="texto_viento">SE</div>
+<div class="imagen_viento">
+<div class="imagen_direccion_viento imagen_SE"></div>
 <div class="texto_km_viento"><div>5</div></div>
 </div>
 </div>
@@ -303,73 +343,19 @@ table, img {
 </div>
 </td>
 <td class="alinear_texto_centro nocomunes">
-<div class="icono_viento" title="Del oeste (O)">
-<div class="texto_viento">O</div>
-<div class="imagen_viento">
-<div class="imagen_direccion_viento imagen_O"></div>
-<div class="texto_km_viento"><div>10</div></div>
-</div>
-</div>
-</td>
-<td class="alinear_texto_centro nocomunes">
-<div class="icono_viento" title="Del noroeste (NO)">
-<div class="texto_viento">NO</div>
-<div class="imagen_viento">
-<div class="imagen_direccion_viento imagen_NO"></div>
-<div class="texto_km_viento"><div>15</div></div>
-</div>
-</div>
-</td>
-<td class="alinear_texto_centro nocomunes">
-<div class="icono_viento" title="Del oeste (O)">
-<div class="texto_viento">O</div>
-<div class="imagen_viento">
-<div class="imagen_direccion_viento imagen_O"></div>
-<div class="texto_km_viento"><div>10</div></div>
-</div>
-</div>
-</td>
-<td class="alinear_texto_centro nocomunes">
-<div class="icono_viento" title="Del oeste (O)">
-<div class="texto_viento">O</div>
-<div class="imagen_viento">
-<div class="imagen_direccion_viento imagen_O"></div>
-<div class="texto_km_viento"><div>10</div></div>
-</div>
-</div>
-</td>
-<td class="alinear_texto_centro nocomunes">
-<div class="icono_viento" title="Del oeste (O)">
-<div class="texto_viento">O</div>
-<div class="imagen_viento">
-<div class="imagen_direccion_viento imagen_O"></div>
-<div class="texto_km_viento"><div>10</div></div>
-</div>
-</div>
-</td>
-<td class="alinear_texto_centro nocomunes">
-<div class="icono_viento" title="Del oeste (O)">
-<div class="texto_viento">O</div>
-<div class="imagen_viento">
-<div class="imagen_direccion_viento imagen_O"></div>
-<div class="texto_km_viento"><div>5</div></div>
-</div>
-</div>
-</td>
-<td class="alinear_texto_centro nocomunes">
 <div class="icono_viento" title="Del norte (N)">
 <div class="texto_viento">N</div>
 <div class="imagen_viento">
 <div class="imagen_direccion_viento imagen_N"></div>
-<div class="texto_km_viento"><div>5</div></div>
+<div class="texto_km_viento"><div>15</div></div>
 </div>
 </div>
 </td>
 <td class="alinear_texto_centro nocomunes">
-<div class="icono_viento" title="Del nordeste (NE)">
-<div class="texto_viento">NE</div>
+<div class="icono_viento" title="Del este (E)">
+<div class="texto_viento">E</div>
 <div class="imagen_viento">
-<div class="imagen_direccion_viento imagen_NE"></div>
+<div class="imagen_direccion_viento imagen_E"></div>
 <div class="texto_km_viento"><div>10</div></div>
 </div>
 </div>
@@ -389,6 +375,50 @@ table, img {
 <div class="imagen_viento">
 <div class="imagen_direccion_viento imagen_E"></div>
 <div class="texto_km_viento"><div>15</div></div>
+</div>
+</div>
+</td>
+<td class="alinear_texto_centro nocomunes">
+<div class="icono_viento" title="Del este (E)">
+<div class="texto_viento">E</div>
+<div class="imagen_viento">
+<div class="imagen_direccion_viento imagen_E"></div>
+<div class="texto_km_viento"><div>15</div></div>
+</div>
+</div>
+</td>
+<td class="alinear_texto_centro nocomunes">
+<div class="icono_viento" title="Del este (E)">
+<div class="texto_viento">E</div>
+<div class="imagen_viento">
+<div class="imagen_direccion_viento imagen_E"></div>
+<div class="texto_km_viento"><div>15</div></div>
+</div>
+</div>
+</td>
+<td class="alinear_texto_centro nocomunes">
+<div class="icono_viento" title="En calma">
+<div class="texto_viento">C</div>
+<div class="imagen_viento">
+<div class="texto_km_viento"><div>0</div></div>
+</div>
+</div>
+</td>
+<td class="alinear_texto_centro nocomunes">
+<div class="icono_viento" title="Del este (E)">
+<div class="texto_viento">E</div>
+<div class="imagen_viento">
+<div class="imagen_direccion_viento imagen_E"></div>
+<div class="texto_km_viento"><div>10</div></div>
+</div>
+</div>
+</td>
+<td class="alinear_texto_centro nocomunes">
+<div class="icono_viento" title="Del este (E)">
+<div class="texto_viento">E</div>
+<div class="imagen_viento">
+<div class="imagen_direccion_viento imagen_E"></div>
+<div class="texto_km_viento"><div>5</div></div>
 </div>
 </div>
 </td>
@@ -400,30 +430,30 @@ table, img {
 
 
 <tr class="fila_par">
-<th abbr="UV" colspan="13" title="Indice ultravioleta máximo"><b class="cabecera_tabla_localidades">Indice ultravioleta máximo</b></th>
+<th abbr="UV" colspan="14" title="Indice ultravioleta máximo"><b class="cabecera_tabla_localidades">Indice ultravioleta máximo</b></th>
 </tr>
 <tr>
-<td class="comunes" colspan="2"><span class="raduv_pred_nivel3" title="índice ultravioleta alto">  6</span></td>
+<td class="comunes" colspan="3"><span class="raduv_pred_nivel2" title="índice ultravioleta moderado">  5</span></td>
 <td class="comunes" colspan="4"><span class="raduv_pred_nivel3" title="índice ultravioleta alto">  6</span></td>
-<td class="comunes" colspan="2"><span class="raduv_pred_nivel2" title="índice ultravioleta moderado">  5</span></td>
+<td class="comunes" colspan="2"><span class="raduv_pred_nivel3" title="índice ultravioleta alto">  6</span></td>
 <td class="comunes" colspan="2"><span class="raduv_pred_nivel3" title="índice ultravioleta alto">  6</span></td>
 <td class="comunes" colspan="1"><span class="raduv_pred_nivel3" title="índice ultravioleta alto">  6</span></td>
 <td class="fondo_celda_azul_claro comunes" colspan="1"> </td>
 <td class="fondo_celda_azul_claro comunes" colspan="1"> </td>
 </tr>
 <tr class="fila_par">
-<th abbr="Aviso" colspan="13" title="Avisos">
+<th abbr="Aviso" colspan="14" title="Avisos">
 <b class="cabecera_tabla_localidades"><div>Avisos. Vegas del Guadiana</div></b>
 </th>
 </tr>
 <tr>
-<td class="comunes alinear_texto_centro" colspan="2">
+<td class="comunes alinear_texto_centro" colspan="3">
 <a aria-label="Sin Riesgo" class="margin_right5px" href="https://www.aemet.es/es/eltiempo/prediccion/avisos?w=hoy&amp;l=700601" title="Sin Riesgo">
 <div class="aviso_fenomeno_SR ico_fondo_redondeado_aviso_nivel_4" title="Sin Riesgo"></div>
 </a>
 </td>
 <td class="comunes alinear_texto_centro" colspan="4">
-<a aria-label="Sin Riesgo" class="margin_right5px" href="https://www.aemet.es/es/eltiempo/prediccion/avisos?w=mna&amp;l=700601" title="Sin Riesgo">
+<a aria-label="Sin Riesgo" class="margin_right5px" href="https://www.aemet.es/es/eltiempo/prediccion/avisos?w=pmna&amp;l=700601" title="Sin Riesgo">
 <div class="aviso_fenomeno_SR ico_fondo_redondeado_aviso_nivel_4" title="Sin Riesgo"></div>
 </a>
 </td>

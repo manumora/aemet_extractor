@@ -5,7 +5,7 @@ import os
 from urllib.parse import urljoin
 
 output_dir = "/var/www/html/"
-#output_dir = "./"
+output_dir = "./"
 
 os.makedirs(output_dir, exist_ok=True)
 
@@ -121,6 +121,10 @@ body {{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }}
 
 /* Ajustes adicionales para mejorar la visualización con el zoom */
@@ -130,6 +134,11 @@ html {{
 
 table, img {{
     max-width: 100%;
+}}
+
+/* Estilo para aplicar fondo blanco a las celdas de la tabla */
+td {{
+    background-color: white !important;
 }}
     </style>
     
