@@ -52,7 +52,7 @@ def extraer_contenido_aemet():
         
         # Add title above the table
         titulo = soup.new_tag('h1')
-        titulo['style'] = 'text-align: center; margin: 20px 0; color: #1b4990;'
+        titulo['style'] = 'text-align: center; margin: 20px 0; color: #1b4990; font-family: sans-serif;'
         titulo.string = 'Predicción metereológica - Mérida'
         
         # Find the table to insert the title before it
