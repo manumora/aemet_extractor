@@ -13,12 +13,29 @@ This Python script extracts weather forecast data from the Spanish Meteorologica
 
 ## Requirements
 - Python 3.x
-- Required libraries:
-  - requests
-  - BeautifulSoup4
-  - re (Regular Expressions, built-in)
-  - os (built-in)
-  - urllib.parse (built-in)
+- Dependencies listed in `requirements.txt`
+
+## Installation
+
+1. **Create a virtual environment**:
+   ```bash
+   python3 -m venv venv
+   ```
+
+2. **Activate the virtual environment**:
+   - On macOS/Linux:
+     ```bash
+     source venv/bin/activate
+     ```
+   - On Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+
+3. **Install the dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 Simply run the script:
